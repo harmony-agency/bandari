@@ -91,14 +91,14 @@ function form_submit() {
       window.dataLayer.push({
         event: "formSubmission",
       });
-      $("#register .error-submit").hide();
+      $("#subscriber .error-submit").hide();
       $("#subscriber").hide();
-      $("#register .result").html(
+      $("#subscriber .result").html(
         '<div class="success-submit">' + data["message"] + "</div>"
       );
     } else {
-      $("#register .error-submit").show();
-      $("#register .error-submit").html(data["message"]);
+      $("#subscriber .error-submit").show();
+      $("#subscriber .error-submit").html(data["message"]);
     }
   });
 }
@@ -118,17 +118,6 @@ function persianToEnglish(input) {
   return inputstring;
 }
 
-// hover for copy right
-$(".copyright a").hover(
-  function () {
-    let logo = $(".copyright .hover-company");
-    logo.addClass("active");
-  },
-  function () {
-    let logo = $(".copyright .hover-company");
-    logo.removeClass("active");
-  }
-);
 
 // stickyHeader
 jQuery(function ($) {
@@ -238,26 +227,26 @@ function handleTickInit(tick) {
   };
 }
 
+// sidebar
 var fixmeTop = $(".sidebar").offset().top; // get initial position of the element
-
 $(window).scroll(function () {
   // assign scroll event listener
   var currentScroll = $(window).scrollTop(); // get current position
-  if (currentScroll >= fixmeTop && currentScroll < 7000) {
+  if (currentScroll >= fixmeTop && currentScroll < 8000) {
     // apply position: fixed if you
     $(".sidebar").css({
       // scroll to that element or below it
       position: "fixed",
-      top: "10px",
+      top: "80px",
       bottom: "20px",
-      width: "367px",
+      width: "430px",
     });
   } else {
     // apply position: static
     $(".sidebar").css({
       // if you scroll above it
       position: "static",
-      width: "367px",
+      width: "430px",
       height: "fit-content",
     });
   }
