@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>مهدی بندری</title>
-    <link rel="icon" type="icon" href="assets/images/favicon.png" />
+    <link rel="icon" type="icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/harmony.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -19,13 +19,27 @@
       <header>
         <div class="content">
           <ul>
-            <li>سر فصل‌ها</li>
-            <li>مخاطبین دوره</li>
-            <li>مدرس دوره</li>
-            <li>مشخصات و مزایا</li>
-            <li>مدرک دوره</li>
-            <li>نظرات شرکت کنندگان</li>
-            <li>سوالات متداول</li>
+            <li>
+              <a href="#headlines">سر فصل‌ها</a>
+            </li>
+            <li>
+              <a href="#student">مخاطبین دوره</a>
+            </li>
+            <li>
+              <a href="#teacher"> مدرس دوره </a>
+            </li>
+            <li>
+              <a href="#benefit"> مشخصات و مزایا </a>
+            </li>
+            <li>
+              <a href="#certificate"> مدرک دوره</a>
+            </li>
+            <li>
+              <a href="#testimonial"> نظرات شرکت کنندگان</a>
+            </li>
+            <li>
+              <a href="#faq"> سوالات متداول</a>
+            </li>
           </ul>
           <div class="logo">
             <a href="https://mahdibandari.com/" target="_blank">
@@ -42,7 +56,11 @@
       <!---------------------- introduction ---------------------->
       <section id="introduction">
         <div class="content">
-          <h1 class="title">این فوق دوره ارز دیجیتال متفــــــــاوته</h1>
+          <h1 class="title">
+            این
+            <span> فوق دوره </span>
+            ارز دیجیتال متفــــــــاوته
+          </h1>
           <h3 class="caption">
             می تونیم باهم یک سفری رو شروع کنیم که در انتهای مسیر زندگی متفاوتی
             داشته باشی
@@ -70,7 +88,7 @@
                   <h1>اگر در یکسال گذشته بیت کوین میخریدی چه اتفاقی میفتاد؟</h1>
                   <div class="">
                     <input
-                      type="text"
+                      type="number"
                       placeholder="مبلغ مورد نظر خود را وارد کنید"
                       id="inputPrice"
                     />
@@ -110,6 +128,16 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <!-- steps -->
+            <div id="steps">
+              <div class="content">
+                <h2 class="section-title">
+                  چه مراحلی رو در این سفر هیجان انگیز باهم میگذرونیم؟
+                </h2>
+                <button class="btn btnWay">مشاهده مسیر تریدر شدن</button>
               </div>
             </div>
 
@@ -597,7 +625,8 @@
                   از مبتدی ترین فرد تا حرفه ای ها می تونن از مطالب این دوره بهره
                   ببرند
                 </p>
-                <ul>
+                <input type="checkbox" class="read-more-state" id="seeMore" />
+                <ul class="read-more-wrap">
                   <li>
                     افرادی که تصمیم دارن تو بازار ارزهای دیجیتال
                     <span> سرمایه‌گذاری‌های پر سود </span>
@@ -642,26 +671,12 @@
                     <span> صنعت ماینینگ</span>
                     دارن.
                   </li>
-                  <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-                      <li>
-                        افراد یا شرکتایی که تمایل به سرمایه گذاری و ورود به
-                        <span> صنعت ماینینگ</span>
-                        دارن.
-                      </li>
-                      <li>
-                        افراد یا شرکتایی که تمایل به سرمایه گذاری و ورود به
-                        <span> صنعت ماینینگ</span>
-                        دارن.
-                      </li>
-                      <li>
-                        افراد یا شرکتایی که تمایل به سرمایه گذاری و ورود به
-                        <span> صنعت ماینینگ</span>
-                        دارن.
-                      </li>
-                    </div>
-                  </div>
+                  <li class="read-more-target">test</li>
+                  <li class="read-more-target">test</li>
+                  <li class="read-more-target">test</li>
+                  <li class="read-more-target">test</li>
                 </ul>
+                <label for="seeMore" class="read-more-trigger"></label>
               </div>
             </div>
 
@@ -879,12 +894,14 @@
                 <s class="lastPrice"> ۶,۰۰۰,۰۰۰ تومان </s>
                 <p class="currentPrice">۲,۹۹۰,۰۰۰ تومان</p>
               </div>
-              <a href="">
-                <button class="btn getCode">
-                  دریافت کد تخفیف و درخواست مشاوره
-                </button>
-                <button class="btn signUp">ثبت نام مستقیم در دوره</button>
-              </a>
+              <button
+                class="btn getCode"
+                data-bs-toggle="modal"
+                data-bs-target="#formModal"
+              >
+                دریافت کد تخفیف و درخواست مشاوره
+              </button>
+              <button class="btn signUp">ثبت نام مستقیم در دوره</button>
             </div>
           </div>
         </div>
@@ -897,7 +914,7 @@
         <div class="content">
           <a href="https://mahdibandari.com/" target="_blank">
             <img
-              src="./assets/images/BandariLogoFooter.png"
+              src="./assets/images/BandariLogo.png"
               alt="BandariLogo"
               class="bandariLogo"
             />
@@ -1030,11 +1047,72 @@
           </div>
         </div>
       </div>
+
+      <!-- form Modal -->
+      <div
+        class="modal fade"
+        id="formModal"
+        tabindex="-1"
+        aria-labelledby="formModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img src="./assets/images/formModal.png" alt="" loading="lazy" />
+              <div class="formBox">
+                <p class="formTitle">
+                  جهت دریافـــت
+                  <span> کد تخفیف ۵۰ درصدی </span>
+                  و دریافت مشاوره از پشتیبان‌های فوق دوره ارزهای دیجیتال، فرم
+                  زیر را با اطــــلاعات صحیـــح تکمیل کنیـــد.
+                </p>
+                <form class="subscriber" id="subscriber">
+                  <div class="form-group">
+                    <label for="name">نام و نام خانوادگی</label>
+                    <input
+                      name="name"
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="مثال : ایلان ماسک"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">شماره موبایل</label>
+                    <input
+                      name="phone"
+                      type="number"
+                      class="form-control"
+                      id="phone"
+                      placeholder="مثال : 0912xxxxxxx"
+                    />
+                  </div>
+                  <div class="error-submit"></div>
+                  <div class="text-center">
+                    <button type="submit" class="btn submitForm">
+                      ثبت اطلاعات و دریافت کد تخفیف
+                    </button>
+                  </div>
+                </form>
+                <div class="result"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Design by Harmony Agency -->
 
-    <script src="assets/js/jquery.easing.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
