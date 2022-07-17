@@ -1281,3 +1281,15 @@ footer .harmonyLogo:hover {
 #level .level-icon-1:hover .icon-1{
   opacity: 1;
 }
+
+.accordion-button{
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 90px;
+}
+.accordion-button span{
+
+  margin-left: 5px;
+}
