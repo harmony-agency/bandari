@@ -736,26 +736,64 @@ header .logo {
   font-size: 12px !important;
   font-weight: bold !important;
 }
-#testimonial .swiper-rtl .swiper-button-next {
-  left: 160px !important;
-}
 
-#testimonial .swiper-button-next,
-.swiper-button-prev {
-  top: 63% !important;
-}
 
-#testimonial .swiper-rtl .swiper-button-prev {
-  right: 160px !important;
-}
 
 #testimonial .swiper-slide {
-  height: 300px;
+  height: 245px;
+  background: url(../images/testimonial1.jpg),#1D2353;
+  border-radius: 15px;
+  background-size: cover;
+  opacity: 0.5;
+  margin: 50px 12px;
+}
+#testimonial .swiper-slide-active {
+  opacity: 1;
+  z-index: 2;
+  will-change: transform;
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+}
+#testimonial .swiper-slide  .caption {
+  position: absolute;
+  bottom: 0;
+  z-index: 9999;
+  font-size: 16px;
+  color:#fff;
+}
+
+#testimonial .swiper-slide:after {
+  content:'';
+  height: 52px;
+  width: 100%;
+  background: #1D2353;
+  border-radius: 0px 0px 10px 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+#testimonial .swiper-slide-active:before {
+  content: '';
+  height: 52px;
+  width: 100%;
+  background: url(../images/icon-play.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
 
 .testimonial-title img {
   width: 70px;
 }
+
 
 /*============== headlines ==================*/
 
@@ -962,4 +1000,98 @@ footer .harmonyLogo:hover {
 .copyright .hover-company.active {
   opacity: 1;
   width: 100%;
+}
+
+
+/*============================ level ============================*/
+#level{
+  background: url(../images/lvl-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+}
+#level p{
+  color: #fff;
+  width: 300px;
+  padding: 20px;
+  opacity: 0.5;
+}
+#level .bg-route {
+  position: absolute;
+}
+#level .content{
+  position: relative;
+  height: 506px;
+  top: 40px;
+}
+/* #level .content .col-md-4{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+} */
+
+#level .level-icon{
+  background: #FEFEFE;
+  padding: 20px;
+  border-radius: 15px;
+  transform: rotate3d(1, 1, 19, 30deg);
+  width: 80px;
+  height: 46px;
+}
+
+#level .level-icon {
+  background: #FEFEFE;
+  padding: 20px;
+  border-radius: 15px;
+  transform: rotate3d(1, 1, 11, 30deg);
+  width: 84px;
+  height: 57px;
+  margin: 0;
+  box-shadow: 5px 5px 5px 0px #bcbcbc, inset 4px 4px 15px 0px #ffffff, 7px 13px 13px 1px rgb(68 196 255 / 0%);
+
+}
+#level .level-icon:hover{
+  box-shadow:7px 5px 7px 1px #44c4ff;
+}
+#level .level-icon-1 {
+  position: relative;
+  right: 76px;
+  top: 17px;
+}
+
+#level .level-icon-2{
+  position: relative;
+  left: 83px;
+  top: 37px;
+}
+#level .level-icon-3{
+  position: relative;
+  right: 103px;
+  top: 33px;
+}
+#level .level-icon-4 {
+  position: relative;
+  left: 26px;
+  top: 44px;
+}
+#level .level-icon-5 {
+  position: relative;
+  top: 28px;
+  right: 163px;
+}
+#level  p.second {
+  position: relative;
+  top: 40px;
+  left: 78px;
+  margin-top: 1rem;
+}
+
+#level .level-icon-1:hover .icon-1{
+  opacity: 1;
 }

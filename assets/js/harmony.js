@@ -142,10 +142,13 @@ jQuery(function ($) {
 });
 
 //  testimonial carousels
-var swiper = new Swiper(".mySwiper", {
+var testimonialSwiper = new Swiper(".testimonialSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
   autoplay: {
     delay: 6000,
-    disableOnInteraction: false,
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -154,7 +157,32 @@ var swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
   },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+  },
 });
+
+
+// var elSwiper = $('.testimonialSwiper');
+
+// elSwiper.mouseenter(function () {
+//   testimonialSwiper.autoplay.stop();
+// });
+
+// elSwiper.mouseleave(function () {
+//   testimonialSwiper.autoplay.start();
+// });
 
 // timer
 function handleTickInit(tick) {
@@ -251,3 +279,22 @@ $(".copyright a").hover(
     logo.removeClass("active");
   }
 );
+
+  $('.moviebtn').on('click',function(){
+    var videoSrc=$(this).data('video');
+    $('video').attr('src',videoSrc);
+    $('#radioModal').modal('show');
+
+  });
+
+  $( ".level-icon" ).hover(
+    function() {
+      let str = this.className;
+      let ret = str.split(" ");
+      let textToReplace = ret[1];
+      let newText = textToReplace.replace("level-", "");
+      $('p.'+newText).css("opacity",1);
+    }, function() {
+      $("#level p").css("opacity",0.5);
+    }
+  );
