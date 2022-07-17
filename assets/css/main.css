@@ -660,6 +660,9 @@ header .logo {
   text-align: right;
   text-align-last: right;
 }
+#migration .content p span {
+  color: #f2a900;
+}
 #migration .content img {
   max-width: 50%;
 }
@@ -671,11 +674,12 @@ header .logo {
   text-align: right;
 }
 #teacher .content {
-  background-image: url(../images/teacherDesktop.png);
-  background-repeat: no-repeat;
+  background: #a9c4f3;
   border-radius: 10px;
-  background-size: cover;
-  padding: 10px 30px 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px 30px 0 0;
   min-height: 367px;
 }
 #teacher .content #teacherAccordion {
@@ -911,11 +915,9 @@ header .logo {
   font-weight: bold !important;
 }
 
-
-
 #testimonial .swiper-slide {
   height: 245px;
-  background: url(../images/testimonial1.jpg),#1D2353;
+  background: url(../images/testimonial1.jpg), #1d2353;
   border-radius: 15px;
   background-size: cover;
   opacity: 0.5;
@@ -936,26 +938,26 @@ header .logo {
   -o-transition: transform 0.5s;
   transition: transform 0.5s;
 }
-#testimonial .swiper-slide  .caption {
+#testimonial .swiper-slide .caption {
   position: absolute;
   bottom: 0;
   z-index: 9999;
   font-size: 16px;
-  color:#fff;
+  color: #fff;
 }
 
 #testimonial .swiper-slide:after {
-  content:'';
+  content: "";
   height: 52px;
   width: 100%;
-  background: #1D2353;
+  background: #1d2353;
   border-radius: 0px 0px 10px 10px;
   position: absolute;
   bottom: 0;
 }
 
 #testimonial .swiper-slide-active:before {
-  content: '';
+  content: "";
   height: 52px;
   width: 100%;
   background: url(../images/icon-play.png);
@@ -967,17 +969,12 @@ header .logo {
 .testimonial-title img {
   width: 70px;
 }
-<<<<<<< HEAD
 
-
-/*============== headlines ==================*/
-=======
 /*============================ faq ============================*/
 #faq {
   margin-top: 100px;
 }
 /*============================ headlines ============================*/
->>>>>>> 84cc06241e97451afc75bd90e63829ab40bcdd08
 
 .accordion-item:first-of-type {
   border-radius: 10px;
@@ -1010,7 +1007,8 @@ header .logo {
   left: 39px;
   /* filter: brightness(0) invert(1); */
 }
-.accordion-item:first-of-type .accordion-button {
+.accordion-item:first-of-type .accordion-button,
+.accordion-item .accordion-button {
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -1188,9 +1186,8 @@ footer .harmonyLogo:hover {
   width: 100%;
 }
 
-
 /*============================ level ============================*/
-#level{
+#level {
   background: url(../images/lvl-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -1199,9 +1196,8 @@ footer .harmonyLogo:hover {
   align-content: center;
   justify-content: center;
   align-items: center;
-
 }
-#level p{
+#level p {
   color: #fff;
   width: 300px;
   padding: 20px;
@@ -1210,7 +1206,7 @@ footer .harmonyLogo:hover {
 #level .bg-route {
   position: absolute;
 }
-#level .content{
+#level .content {
   position: relative;
   height: 506px;
   top: 40px;
@@ -1222,8 +1218,8 @@ footer .harmonyLogo:hover {
   justify-content: space-around;
 } */
 
-#level .level-icon{
-  background: #FEFEFE;
+#level .level-icon {
+  background: #fefefe;
   padding: 20px;
   border-radius: 15px;
   transform: rotate3d(1, 1, 19, 30deg);
@@ -1232,18 +1228,18 @@ footer .harmonyLogo:hover {
 }
 
 #level .level-icon {
-  background: #FEFEFE;
+  background: #fefefe;
   padding: 20px;
   border-radius: 15px;
   transform: rotate3d(1, 1, 11, 30deg);
   width: 84px;
   height: 57px;
   margin: 0;
-  box-shadow: 5px 5px 5px 0px #bcbcbc, inset 4px 4px 15px 0px #ffffff, 7px 13px 13px 1px rgb(68 196 255 / 0%);
-
+  box-shadow: 5px 5px 5px 0px #bcbcbc, inset 4px 4px 15px 0px #ffffff,
+    7px 13px 13px 1px rgb(68 196 255 / 0%);
 }
-#level .level-icon:hover{
-  box-shadow:7px 5px 7px 1px #44c4ff;
+#level .level-icon:hover {
+  box-shadow: 7px 5px 7px 1px #44c4ff;
 }
 #level .level-icon-1 {
   position: relative;
@@ -1251,12 +1247,12 @@ footer .harmonyLogo:hover {
   top: 17px;
 }
 
-#level .level-icon-2{
+#level .level-icon-2 {
   position: relative;
   left: 83px;
   top: 37px;
 }
-#level .level-icon-3{
+#level .level-icon-3 {
   position: relative;
   right: 103px;
   top: 33px;
@@ -1271,16 +1267,17 @@ footer .harmonyLogo:hover {
   top: 28px;
   right: 163px;
 }
-#level  p.second {
+#level p.second {
   position: relative;
   top: 40px;
   left: 78px;
   margin-top: 1rem;
 }
 
-#level .level-icon-1:hover .icon-1{
+#level .level-icon-1:hover .icon-1 {
   opacity: 1;
 }
+<<<<<<< HEAD
 
 .accordion-button{
   border-radius: 10px;
@@ -1293,3 +1290,5 @@ footer .harmonyLogo:hover {
 
   margin-left: 5px;
 }
+=======
+>>>>>>> adc35af7f36623d5928a75a8a8b434ce16c24543
