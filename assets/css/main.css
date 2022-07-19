@@ -118,7 +118,7 @@ input[type="number"] {
 header {
   background: rgba(0, 1, 7, 0.58);
   backdrop-filter: blur(6px);
-  padding: 10px 80px;
+  padding: 5px 80px;
 }
 header .content {
   display: flex;
@@ -139,6 +139,9 @@ header ul li a {
   color: #fff;
   font-weight: 700;
   font-size: 18px;
+}
+a[href*="#headlines"] {
+  color: #ffb800;
 }
 header ul li a:hover {
   color: #ffb800;
@@ -185,7 +188,8 @@ header .logo {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 110px 0 256px 110px;
+  padding-left: 110px;
+  height: 100vh;
 }
 #introduction .content {
   background: rgba(0, 1, 7, 0.58);
@@ -193,8 +197,8 @@ header .logo {
   background-position: center;
   text-align: right;
   text-align-last: right;
-  padding: 70px 30px 60px;
-  max-width: 40%;
+  padding: 30px;
+  max-width: 50%;
 }
 #introduction .content .title {
   font-weight: 700;
@@ -208,15 +212,15 @@ header .logo {
 #introduction .content .caption {
   font-weight: 300;
   font-size: 30px;
-  margin: 0;
   color: #ffffff;
-  margin: 0 0 24px;
+  margin: 0 0 15px;
+  line-height: 1.5;
 }
 #introduction .content .info {
   font-weight: 300;
   font-size: 24px;
   color: #f2a900;
-  margin: 0 0 33px;
+  margin: 0 0 20px;
   text-align: right;
   text-align-last: right;
 }
@@ -251,6 +255,7 @@ header .logo {
   border-radius: 5px;
   padding: 0 30px 30px;
   margin: 0 auto;
+  height: fit-content;
 }
 
 /*============================ timer ============================*/
@@ -260,7 +265,7 @@ header .logo {
   text-align: center;
   padding: 14px 20px;
   max-width: 90%;
-  margin: 0 auto 24px;
+  margin: 0 auto 20px;
 }
 #sidebar .timer .tick {
   padding: 0;
@@ -318,6 +323,7 @@ header .logo {
   font-size: 24px;
   text-align: center;
   margin: 0 auto 16px;
+  line-height: 1.5;
 }
 #sidebar .discountBox {
   background: #1c2958;
@@ -331,6 +337,7 @@ header .logo {
   font-weight: 500;
   font-size: 20px;
   color: #f7a400;
+  line-height: 1.2;
 }
 #sidebar .discountBox .lastPrice {
   color: rgba(255, 255, 255, 0.4);
@@ -351,7 +358,7 @@ header .logo {
   background: #f2a900;
   color: #1d2353;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   font-weight: 700;
   font-size: 18px;
 }
@@ -382,9 +389,11 @@ header .logo {
   align-items: center;
   justify-content: center;
   padding: 40px 0 55px;
+  border: 1px solid #f2a900;
+  border-radius: 5px;
 }
 #calculate .content {
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto;
 }
 /* ------------ firstStep ------------ */
@@ -420,7 +429,7 @@ header .logo {
   background: #f7a400;
   color: #1d2353;
   border-radius: 5px;
-  padding: 12px 21px;
+  padding: 8px 21px;
   font-weight: 700;
   font-size: 20px;
   margin-right: 4px;
@@ -448,7 +457,7 @@ header .logo {
   display: flex;
   align-items: center;
 }
-#calculate .secondStep .top .againBtn i {
+#calculate .secondStep .top .againBtn img {
   margin-right: 5px;
 }
 #calculate .secondStep .bottom {
@@ -460,7 +469,7 @@ header .logo {
   background: #101946;
   backdrop-filter: blur(20px);
   border-radius: 5px;
-  padding: 21px 71px;
+  padding: 21px 45px;
 }
 #calculate .secondStep .professional {
   margin-left: 7px;
@@ -498,26 +507,52 @@ header .logo {
   font-size: 18px;
   margin: 0 auto;
 }
-
+#calculate .secondStep .beTrader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#calculate .secondStep .beTrader p {
+  font-weight: 300;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+}
+#calculate .secondStep .beTrader .traderBtn {
+  background: #f7a400;
+  border-radius: 5px;
+  color: #1d2353;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 5px 60px;
+  height: 45px;
+}
 /*============================ steps ============================*/
 #steps {
   background-image: url(../images/stepsBg.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   padding-right: 30px;
   height: 500px;
   margin-top: 58px;
 }
-#steps .content {
-  max-width: 40%;
+
+#steps .section-title {
+  max-width: 70%;
 }
-#steps .btnWay {
+#steps .stepsBtn {
   background: #f7a400;
   border-radius: 5px;
-  width: 240px;
+  width: 245px;
   padding: 10px 20px;
+  font-weight: 700;
+  font-size: 20px;
 }
 /*============================ why ============================*/
 #why {
@@ -611,7 +646,7 @@ header .logo {
 }
 #certificate .content {
   background: #0f1845;
-  border-radius: 10px;
+  border-radius: 0 10px 10px 0;
   padding: 32px;
 }
 .nav-link {
@@ -685,8 +720,19 @@ header .logo {
 #teacher .content #teacherAccordion {
   max-width: 50%;
 }
+#teacher .content #teacherAccordion ul {
+  padding: 0;
+}
+#teacher .content #teacherAccordion ul li {
+  font-size: 14px;
+  text-align: right;
+  list-style: disc;
+}
 #teacher .accordion-item {
   background-color: transparent;
+}
+#teacher .accordion-item:first-child {
+  margin: 0;
 }
 #teacher .accordion-button,
 #teacher .accordion-button:not(.collapsed) {
@@ -710,7 +756,7 @@ header .logo {
 #teacher .accordion-body {
   font-weight: 400;
   font-size: 18px;
-  padding: 10px 0;
+  padding: 10px 0 0;
   text-align: justify;
 }
 
@@ -821,11 +867,12 @@ header .logo {
 }
 .read-more-state:checked ~ .read-more-trigger:before {
   content: "بستن";
-  background-image: url(../images/up-arrow.svg);
+  background-image: none;
   background-repeat: no-repeat;
   background-position: 0px center;
   position: absolute;
   width: 65px;
+  height: 65px;
 }
 .read-more-trigger {
   cursor: pointer;
@@ -1013,7 +1060,7 @@ header .logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 90px;
+  padding: 5px 5px 5px 90px;
 }
 .accordion-button:not(.collapsed) {
   background-color: #0f1845;
@@ -1045,13 +1092,14 @@ button.accordion-button {
   font-size: 18px;
   color: #ffffff;
   margin: 0;
+  text-align: right;
 }
 .accordion-header .chapterTitle span {
   color: #f2a900;
 }
 .accordion-header .classTime {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   color: #f2a900;
   margin: 0;
 }
@@ -1083,12 +1131,12 @@ button.accordion-button {
   background: #f2a900;
   color: #1d2353;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 15px 10px;
+  padding: 15px 5px;
   width: 240px;
   height: fit-content;
 }
@@ -1106,7 +1154,7 @@ button.accordion-button {
 #loan .caption {
   background: #0f1845;
   border-radius: 10px 0 0 10px;
-  padding: 26px 23px 33px 61px;
+  padding: 26px 23px 33px;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -1153,7 +1201,7 @@ footer .social-icon i {
   margin: 0 10px;
 }
 footer hr {
-  width: 400px;
+  width: 360px;
   color: #f2a900;
 }
 footer .harmonyLogo {
@@ -1278,18 +1326,21 @@ footer .harmonyLogo:hover {
   opacity: 1;
 }
 
-.accordion-button{
+.accordion-button {
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 90px;
 }
-.accordion-button span{
-
-  margin-left: 5px;
+.accordion-button span:first-child {
+  margin: 0 14px;
 }
-
-.success{
+.success {
   color: #fff;
+}
+@media screen and (min-width: 768px) and (max-width: 1700px) {
+  #introduction .content .title {
+    font-size: 34px;
+  }
 }

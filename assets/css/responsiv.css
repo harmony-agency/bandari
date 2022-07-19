@@ -39,6 +39,8 @@
     align-items: center;
     padding: 5px;
     margin: 0 auto;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .mobileNav li a {
@@ -106,6 +108,7 @@
   /*============================ calculate ============================*/
   #calculate .firstStep h1 {
     font-size: 20px;
+    line-height: 1.5;
   }
   #calculate .firstStep input {
     width: 100%;
@@ -135,12 +138,28 @@
   #calculate .secondStep .bottom > div {
     padding: 15px 30px;
   }
-
+  #calculate .secondStep .beTrader {
+    flex-direction: column;
+  }
+  #calculate .secondStep .beTrader p {
+    font-size: 14px;
+    margin: 0 auto 10px;
+  }
   /*============================ steps ============================*/
   #steps {
+    background-image: url(../images/stepsBgMobile.png);
+    justify-content: space-around;
+    padding: 0 15px;
   }
   #steps .content {
+    max-width: 100%;
+  }
+  #steps .section-title {
+    font-size: 20px;
     max-width: 70%;
+  }
+  #steps .stepsBtn {
+    width: 100%;
   }
 
   /*============================ sidebar ============================*/
@@ -197,9 +216,8 @@
 
   /*============================ advantages ============================*/
   #advantages {
-    margin-top: 30px;
+    margin-top: 50px;
     background-image: none;
-
   }
   #advantages ul {
     padding: 0;
@@ -207,7 +225,7 @@
 
   /*============================ migration ============================*/
   #migration {
-    margin-top: 30px;
+    margin-top: 50px;
   }
   #migration .content {
     flex-direction: column;
@@ -223,12 +241,60 @@
     text-align: justify;
     margin-bottom: 10px;
   }
+  /*============================ headlines ============================*/
+  #headlines .section-title {
+    text-align: center;
+  }
+  #headlines ul {
+    padding: 0;
+    text-align: right;
+    text-align-last: right;
+  }
   /*============================ certificate ============================*/
+  #certificate {
+    margin-top: 50px;
+  }
   #certificate .certificateBox {
     flex-direction: column;
   }
-
+  #certificate .accordion-item:first-of-type .accordion-button,
+  .accordion-item .accordion-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  #certificate .content {
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+  }
+  #certificate .accordion-body {
+    padding: 5px;
+    text-align: right;
+    text-align-last: right;
+  }
+  #certificate .accordion-item .accordion-button {
+    color: #f2a900;
+  }
+  #certificate .accordion-button.collapsed {
+    color: #fff;
+  }
+  #certificate .accordion-item .accordion-button img {
+    color: #f2a900;
+  }
+  #certificate .accordion-button.collapsed {
+    color: #fff;
+  }
+  #certificate .accordion-button img {
+    margin-left: 10px;
+  }
   /*============================ teacher ============================*/
+  #teacher {
+    margin-top: 50px;
+  }
+  #teacher .accordion-button:not(.collapsed)::after,
+  #teacher .accordion-button::after {
+    left: 1px;
+  }
   #teacher .content {
     flex-direction: column;
     padding: 10px 10px 0;
@@ -238,6 +304,9 @@
   }
   #teacher .accordion-button {
     font-size: 16px;
+  }
+  #teacher .content #teacherAccordion ul {
+    padding-right: 15px;
   }
 
   /*============================ interview ============================*/
@@ -267,7 +336,7 @@
   }
   /*============================ club ============================*/
   #club {
-    margin-top: 30px;
+    margin-top: 50px;
   }
   #club .content {
     flex-direction: column;
@@ -300,7 +369,9 @@
     text-align: center;
   }
   /*============================ testimonial ============================*/
-
+  #testimonial {
+    margin-top: 50px;
+  }
   #testimonial .swiper h2 {
     margin-bottom: 1rem;
     font-size: 24px;
@@ -344,11 +415,13 @@
 
   #testimonial .swiper {
     width: 100%;
-    height: 572px;
+    height: fit-content;
+    padding: 65px;
   }
   #testimonial .swiper-slide {
     padding: 0 5px;
-    height: 505px;
+    /* height: 505px; */
+    margin: 0;
   }
   #testimonial .testimonialHeader {
     display: flex;
@@ -358,7 +431,7 @@
   /*============================ faq ============================*/
 
   #faq {
-    margin-bottom: 0;
+    margin: 50px auto 0;
   }
 
   #faq .section-title {
@@ -429,6 +502,10 @@
   }
   #faq .accordion .accordion-button:not(.collapsed) span {
     border: none;
+  }
+  #faq .accordion-item:first-of-type .accordion-button,
+  .accordion-item .accordion-button {
+    padding: 9px 5px 9px 30px;
   }
   .accordion-item .card-body p {
     text-align: center;

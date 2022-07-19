@@ -25,7 +25,23 @@ $(document).ready(function () {
       form_submit();
     },
   });
-
+  $("#calculator").validate({
+    // initialize the plugin
+    rules: {
+      price: {
+        required: true,
+      }
+    },
+    messages: {
+      price: {
+        required: "لطفا مبلغ خود را وارد کنید",
+      },
+     
+    },
+    submitHandler: function () {
+      form_calculator();
+    },
+  });
   // hover package
   $(".middleBox").hover(
     function () {
@@ -68,6 +84,20 @@ if (location.search != "") {
   sessionStorage.setItem("utm_content", utm_content);
 }
 
+function form_calculator(){
+
+  let price = parseInt($("form#calculator #price").val());
+  $(".secondStep #inputPrice").html(price.toLocaleString());
+  let professionalPrice = parseInt((price*67)/100);
+  let amateurPrice = parseInt((price*63)/100);
+
+
+  $(".professionalPrice").html(professionalPrice.toLocaleString());
+  $(".amateurPrice").html(amateurPrice.toLocaleString());
+  $("#calculate .firstStep").hide();
+  $(".secondStep").fadeIn();
+
+}
 function form_submit() {
   var formDataSubscriber = {
     name: $("#subscriber #name").val(),
@@ -93,7 +123,7 @@ function form_submit() {
       });
       $("#subscriber .error-submit").hide();
       $("#subscriber").hide();
-      $("#subscriber .result").html(
+      $(".modal-body .result").html(
         '<div class="success-submit">' + data["message"] + "</div>"
       );
     } else {
@@ -136,9 +166,9 @@ var testimonialSwiper = new Swiper(".testimonialSwiper", {
   spaceBetween: 30,
   centeredSlides: true,
   centeredSlidesBounds: true,
-  autoplay: {
-    delay: 6000,
-  },
+  // autoplay: {
+  //   delay: 6000,
+  // },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -237,7 +267,7 @@ $(window).scroll(function () {
     $(".sidebar").css({
       // scroll to that element or below it
       position: "fixed",
-      top: "80px",
+      top: "70px",
       bottom: "20px",
       width: "430px",
     });
@@ -269,21 +299,29 @@ $(".copyright a").hover(
   }
 );
 
-  $('.moviebtn').on('click',function(){
-    var videoSrc=$(this).data('video');
-    $('video').attr('src',videoSrc);
-    $('#radioModal').modal('show');
+$('.moviebtn').on('click', function () {
+  var videoSrc = $(this).data('video');
+  $('video').attr('src', videoSrc);
+  $('#radioModal').modal('show');
 
-  });
+});
 
-  $( ".level-icon" ).hover(
-    function() {
-      let str = this.className;
-      let ret = str.split(" ");
-      let textToReplace = ret[1];
-      let newText = textToReplace.replace("level-", "");
-      $('p.'+newText).css("opacity",1);
-    }, function() {
-      $("#level p").css("opacity",0.5);
-    }
-  );
+$(".level-icon").hover(
+  function () {
+    let str = this.className;
+    let ret = str.split(" ");
+    let textToReplace = ret[1];
+    let newText = textToReplace.replace("level-", "");
+    $('p.' + newText).css("opacity", 1);
+  },
+  function () {
+    $("#level p").css("opacity", 0.5);
+  }
+);
+
+$('.againBtn').on('click',function(){
+    
+  $("#calculate .secondStep").hide();
+  $("#calculate .firstStep").fadeIn();
+
+});

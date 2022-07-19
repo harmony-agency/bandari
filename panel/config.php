@@ -2,10 +2,10 @@
 
 
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname="";
-$landingName="";
+$username = "vmagzir_bandari";
+$password = "qti.#nOw1J~9";
+$dbname="vmagzir_bandari";
+$landingName="mehdi-bandari";
 
 try {
 

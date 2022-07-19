@@ -1,0 +1,20 @@
+[17-Jul-2022 13:42:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function exec() on null in /home/vmagzir/public_html/Landing/mahdibandari/lan01/panel/process.php:41
+Stack trace:
+#0 {main}
+  thrown in /home/vmagzir/public_html/Landing/mahdibandari/lan01/panel/process.php on line 41
+[17-Jul-2022 13:42:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function exec() on null in /home/vmagzir/public_html/Landing/mahdibandari/lan01/panel/process.php:41
+Stack trace:
+#0 {main}
+  thrown in /home/vmagzir/public_html/Landing/mahdibandari/lan01/panel/process.php on line 41
+[17-Jul-2022 13:57:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function exec() on null in /home/vmagzir/public_html/Landing/mahdibandari/lan01/panel/process.php:41
+Stack trace:
+#0 {main}
+  thrown in /home/vmagzir/public_html/Landing/mahdibandari/lan01/panel/process.php on line 41
+[17-Jul-2022 13:57:37 UTC] PHP Fatal error:  Uncaught Error: Call to a member function exec() on null in /home/vmagzir/public_html/Landing/mahdibandari/lan01/panel/process.php:41
+Stack trace:
+#0 {main}
+  thrown in /home/vmagzir/public_html/Landing/mahdibandari/lan01/panel/process.php on line 41
+[17-Jul-2022 13:57:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function exec() on null in /home/vmagzir/public_html/Landing/mahdibandari/lan01/panel/process.php:41
+Stack trace:
+#0 {main}
+  thrown in /home/vmagzir/public_html/Landing/mahdibandari/lan01/panel/process.php on line 41

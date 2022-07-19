@@ -31,7 +31,8 @@ if(isset($phone))  {
                     $data['message'] = 'لطفا شماره تماس معتبر وارد کنید.';
                     $data['success'] = false;
                 }else{
-                    // $data['success'] = true;
+                    
+                     $data['success'] = true;
          
                     try {
                         
